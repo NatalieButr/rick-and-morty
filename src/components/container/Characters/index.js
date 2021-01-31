@@ -62,8 +62,6 @@ export default function Characters() {
     [info, isLoading, isLoadingMore],
   );
 
-  console.log(characters);
-
   return (
     <div className="characters">
       {characters.map((item) => (

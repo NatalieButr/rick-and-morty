@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(36, 40, 47);
+  color: white;
+  --color-grey: rgb(60, 62, 68);
+}
+
+body {
+  &[modal-open] {
+    overflow: hidden;
+  }
 }
 
 * {
@@ -24,4 +33,5 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-top: 50px;
 }

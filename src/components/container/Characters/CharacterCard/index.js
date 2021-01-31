@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import "./styles.scss";
+import { ALIVE, DEAD } from "utils/constants";
 
-const ALIVE = "Alive";
+import "./styles.scss";
 
 export default function CharacterCard({ item }) {
   return (
@@ -25,14 +25,12 @@ export default function CharacterCard({ item }) {
           <div className="characterCard__row">
             <span
               className={`characterCard__circle ${
-                item.status === ALIVE
-                  ? "characterCard__circle_active"
-                  : "characterCard__circle_dead"
-              }`}
-            />{" "}
+                item.status === ALIVE ? "characterCard__circle_alive" : ""
+              } ${item.status === DEAD ? "characterCard__circle_dead" : ""}`}
+            />
             {item.status} - {item.species}
           </div>
-          <div className="characterCard__row">
+          <div className="characterCard__location">
             <p>Last known location:</p>
             <p>{item.location.name}</p>
           </div>

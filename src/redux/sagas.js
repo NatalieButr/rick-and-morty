@@ -1,7 +1,11 @@
 import { takeEvery, put, call } from "redux-saga/effects";
 
 import { showLoader, hideLoader } from "./loader/actions";
-import { FETCH_CHARACTER_LIST, FETCH_MORE_CHARACTER_LIST } from "./types";
+import {
+  FETCH_CHARACTER,
+  FETCH_CHARACTER_LIST,
+  FETCH_MORE_CHARACTER_LIST,
+} from "./types";
 
 function* sagaWorker(action) {
   const { receiveData, receiveError, callAPI } = action;
@@ -19,4 +23,5 @@ function* sagaWorker(action) {
 export function* sagaWatcher() {
   yield takeEvery(FETCH_CHARACTER_LIST, sagaWorker);
   yield takeEvery(FETCH_MORE_CHARACTER_LIST, sagaWorker);
+  yield takeEvery(FETCH_CHARACTER, sagaWorker);
 }

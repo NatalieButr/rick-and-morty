@@ -1,2 +1,38 @@
 .character {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__link {
+    text-decoration: underline;
+    color: #ffc53a;
+    font-size: 18px;
+  }
+
+  &__panel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+  }
+
+  &__profile {
+    display: flex;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    background: var(--color-grey);
+    padding: 20px;
+  }
 }
