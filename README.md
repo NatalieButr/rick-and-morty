@@ -4,4 +4,4 @@
 
 
 
-demo: http://nataliebutr.github.io/rick-and-morty
+demo: https://rick-and-morty-nataliebutr.netlify.app/
