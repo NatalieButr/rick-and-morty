@@ -1,4 +1,4 @@
-import WebError from "utils/error/WebError";
+import WebError from "lib/errors/WebError";
 
 async function fetchData(url) {
   let response = await fetch(url);
