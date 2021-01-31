@@ -2,7 +2,6 @@
   "name": "rick-and-morti",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nataliebutr.github.io/rick-and-morty",
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -40,9 +39,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./ --ignore-path .gitignore --cache false",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier --write \"src/**/*.+(js|jsx|json|css|scss|md)\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "format": "prettier --write \"src/**/*.+(js|jsx|json|css|scss|md)\""
   },
   "eslintConfig": {
     "extends": [
