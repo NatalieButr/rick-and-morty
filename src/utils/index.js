@@ -1,6 +1,7 @@
 import superagent from "superagent";
 
 import { API_ROOT } from "utils/constants";
+import WebError from "utils/error/WebError";
 
 const json = "application/json";
 
@@ -15,9 +16,10 @@ function onSuccess(response) {
 
 function onFailure(error) {
   let { status } = error;
+
   let response = JSON.parse(error.message) || {};
 
-  console.log(response, status);
+  throw new WebError({ status, code: status, message: response.error });
 }
 
 export function handleRequest(httpRequest) {

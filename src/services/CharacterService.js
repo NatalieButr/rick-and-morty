@@ -1,7 +1,7 @@
 import { HttpClient, withRequestHandler } from "utils";
 
 class CharacterService {
-  constructor(name = "character") {
+  constructor(name = "characters") {
     this.name = name;
     this.httpClient = new HttpClient(name);
   }

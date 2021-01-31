@@ -12,5 +12,5 @@ export default () => {
   }, [dispatch]);
 
   console.log(characters);
-  return <div>dkdk</div>;
+  return <div className="characters">dkdk</div>;
 };

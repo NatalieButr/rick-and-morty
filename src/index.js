@@ -7,7 +7,7 @@ import App from "./App";
 
 import { store } from "./Store";
 
-import "./index.css";
+import "./index.scss";
 
 const app = (
   <Provider store={store}>

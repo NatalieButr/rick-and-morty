@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { usePreventScroll } from "hooks";
 
@@ -22,3 +23,7 @@ export default function Modal({ children, onClose }) {
     </ModalPortal>
   );
 }
+
+Modal.propTypes = {
+  onClose: PropTypes.func.required(),
+};

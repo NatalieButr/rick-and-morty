@@ -1,4 +1,3 @@
-import { HIDE_LOADER, SHOW_LOADER } from "../types";
+import { HIDE_ERROR } from "../types";
 
-export const hideLoader = () => ({ type: HIDE_LOADER });
-export const showLoader = () => ({ type: SHOW_LOADER });
+export const hideError = () => ({ type: HIDE_ERROR });
