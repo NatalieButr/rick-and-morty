@@ -2,7 +2,7 @@
   "name": "rick-and-morti",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gitname.github.io/rick-and-morty",
+  "homepage": "http://nataliebutr.github.io/rick-and-morty",
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
