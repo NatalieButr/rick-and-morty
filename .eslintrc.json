@@ -21,9 +21,9 @@
     "max-len": [
       "warn",
       {
-        "code": 100,
+        "code": 80,
         "tabWidth": 2,
-        "comments": 100,
+        "comments": 80,
         "ignoreComments": false,
         "ignoreTrailingComments": true,
         "ignoreUrls": true,
@@ -44,7 +44,8 @@
     "react/no-typos": "off",
     "react/no-danger": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "no-new": "off"
   },
   "settings": {
     "import/resolver": {
