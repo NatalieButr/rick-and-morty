@@ -1,10 +1,7 @@
 import { takeEvery, put, call } from "redux-saga/effects";
-import { showLoader, hideLoader } from "./loader/actions";
 
-export function* sagaWatcher() {
-  // eslint-disable-next-line no-use-before-define
-  yield takeEvery("FETCH_CHARACTER_LIST", sagaWorker);
-}
+import { showLoader, hideLoader } from "./loader/actions";
+import { FETCH_CHARACTER_LIST, FETCH_MORE_CHARACTER_LIST } from "./types";
 
 function* sagaWorker(action) {
   const { receiveData, receiveError, callAPI } = action;
@@ -14,8 +11,12 @@ function* sagaWorker(action) {
     yield put({ type: receiveData, payload });
     yield put(hideLoader());
   } catch (e) {
-    console.log(e);
-    yield put({ type: receiveError, e });
+    yield put({ type: receiveError, payload: e });
     yield put(hideLoader());
   }
+}
+
+export function* sagaWatcher() {
+  yield takeEvery(FETCH_CHARACTER_LIST, sagaWorker);
+  yield takeEvery(FETCH_MORE_CHARACTER_LIST, sagaWorker);
 }

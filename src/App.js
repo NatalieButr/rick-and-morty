@@ -7,7 +7,7 @@ import ErrorDialog from "components/common/ErrorDialog";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Switch>
         <Route exact path="/" component={CharactersPage} />\
         <Route exact path="/characters/:id" component={CharacterPage} />

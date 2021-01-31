@@ -14,6 +14,7 @@ export default function ErrorDialog() {
   const dispatch = useDispatch();
 
   if (!isError) return null;
+
   return (
     <Modal onClose={() => dispatch(hideError())}>
       <div className="modal">
