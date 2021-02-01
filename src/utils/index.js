@@ -4,10 +4,12 @@ async function fetchData(url) {
   let response = await fetch(url);
   let data = await response.json();
 
-  const { status } = response;
   if (response?.ok) {
     return data;
   }
+
+  const { status } = response;
+
   throw new WebError({
     status,
     code: status,
